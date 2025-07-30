@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('assets/fondo.jpg') no-repeat center center fixed;
+  background: url('assets/360_F_277856380_VPOG25YAsUikOPTT5fneyEf7EWu1LMYh.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
