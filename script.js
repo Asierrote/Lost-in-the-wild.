@@ -1,30 +1,39 @@
-const scenes = [
-  "Son 3 chicos y 2 chicas perdidos en la jungla tras un misterioso accidente...",
-  "Deben encontrar comida, agua y refugio para sobrevivir día tras día...",
-  "Pero algo no encaja: ¿qué causó que se perdieran? ¿Quién más ronda la jungla?",
-  "¡Tu aventura empieza ahora!"
-];
-
-let currentScene = 0;
-
-function startGame() {
-  document.getElementById('menu').style.display = 'none';
-  document.getElementById('story').style.display = 'block';
-  document.getElementById('storyText').innerText = scenes[currentScene];
-
-  document.getElementById('jungleAudio').play();
-  document.getElementById('rainAudio').play();
+body {
+  margin: 0;
+  padding: 0;
+  background: url('assets/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
-function nextScene() {
-  currentScene++;
-  if (currentScene < scenes.length) {
-    document.getElementById('storyText').innerText = scenes[currentScene];
-  } else {
-    alert('Fin de la demo. Más escenas pronto!');
-  }
+.container {
+  text-align: center;
 }
 
-function joinGame() {
-  alert('Próximamente: sistema multijugador.');
+.logo {
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(0, 128, 0, 0.8);
+  color: white;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: rgba(0, 128, 0, 1);
 }
